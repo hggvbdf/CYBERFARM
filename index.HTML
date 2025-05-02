@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CYBERFARM - Smart Farming Solutions</title>
+  <style>
+    :root {
+      --primary-green: #004094;
+      --tech-blue: #0257ac;
+      --accent-metal: #607D8B;
+      --background-light: #000000;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--background-light);
+      color: #000000;
+    }
+
+    .header {
+      background: linear-gradient(135deg, var(--primary-green) 60%, var(--tech-blue));
+      padding: 1rem 2rem;
+      color: rgb(250, 250, 250);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .nav {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    .hero {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: url('farm-tech-bg.jpg') center/cover no-repeat;
+      color: white;
+    }
+
+    .hero button {
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--primary-green);
+      color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      text-align: center;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .features-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      background: white;
+    }
+
+    .cta-banner {
+      background: var(--tech-blue);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .cta-banner button {
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--primary-green);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .footer {
+      background: var(--primary-green);
+      color: white;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-green);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+      }
+
+      .nav.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>Cyberfarm</h1>
+    <nav class="nav" id="nav">
+      <a href="#products">Products</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#education">Education</a>
+      <a href="#support">Support</a>
+    </nav>
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Empowering the Future of Agriculture</h2>
+    <p>Smart farming solutions for sustainable agriculture</p>
+    <button>Explore Products</button>
+  </section>
+
+  <main class="products-grid" id="products">
+    <article class="product-card">
+      <img src="https://www-cdn.djiits.com/dps/2604ab4bda369c026b4d94a48d43d9d9.jpg" alt="Precision Drone">
+      <h3>Precision Drones</h3>
+      <p>Crop monitoring and spraying systems with AI analytics</p>
+      <p class="price">$2,499</p>
+      <button>Customize</button>
+    </article>
+
+    <article class="product-card">
+      <img src="https://www-cdn.djiits.com/dps/2604ab4bda369c026b4d94a48d43d9d9.jpg" alt="Smart Sensor">
+      <h3>Smart Sensors</h3>
+      <p>Real-time soil and climate monitoring</p>
+      <p class="price">$399</p>
+      <button>Learn More</button>
+    </article>
+
+    <!-- Add more product cards as needed -->
+  </main>
+
+  <section class="features-section">
+    <div class="feature">
+      <h4>AR Equipment Preview</h4>
+      <p>Visualize tools on your farm using augmented reality</p>
+    </div>
+    <div class="feature">
+      <h4>Expert Support</h4>
+      <p>24/7 access to farming technology specialists</p>
+    </div>
+    <!-- Add more features as needed -->
+  </section>
+
+  <section class="cta-banner">
+    <h2>Ready to Modernize Your Farm?</h2>
+    <button>Start Free Consultation</button>
+    <button>Browse Best Sellers</button>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <h4>Smart Farming</h4>
+      <ul>
+        <li><a href="#">Drones</a></li>
+        <li><a href="#">Irrigation Systems</a></li>
+        <li><a href="#">Sensors</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">Calculators</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    // Basic interactivity for product buttons
+    document.querySelectorAll('.product-card button').forEach(button => {
+      button.addEventListener('click', () => {
+        console.log('Product added to cart');
+      });
+    });
+  </script>
+</body>
+</html>
